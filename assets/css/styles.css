@@ -1,0 +1,272 @@
+:root{
+    --primario: #9C27B0;
+    --primarioOscuro: #89119D;
+    --secundario: #FFCE00;
+    --secundarioOscuro: rgb(233,287,2);
+    --blanco: #FFF;
+    --negro: #000;
+
+    --fuentePpal: font-family: "Staatliches", sans-serif;
+    --fuenteSecundaria: font-family: "Lato", sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  /*GLOBALES*/
+  body{
+    
+    background-color: #9C27B0;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+p{
+    font-size: 18px;
+    font-family: "Lato", sans-serif;
+    color: var(--blanco) 
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    width: 100%;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto; /*centrar contenido*/
+}
+
+h1,h2,h3{
+    text-align: center;
+    color: var(--secundario);
+    font-family: "Staatliches";
+}
+
+h1{
+    font-size: 40px;
+    
+}
+
+h2{
+    font-size: 32px;
+}
+
+h3{
+    font-size: 24px;
+}
+
+/*HEADER*/
+.header{
+    display: flex;
+    justify-content: center;
+}
+
+.header__logo{
+    width: auto;
+    margin: 30px 0; /*el primer valor es arriba y abajo, el segundo izq y der*/
+}
+
+/*FOOTER*/
+.footer{
+    background-color: var(--primarioOscuro);
+    padding: 10px 0;
+    margin-top: 20px;
+    
+}
+
+.footer__texto{
+    text-align: center;
+    font-size: 15px;
+    font-family: "Staatliches", sans-serif;
+}
+
+/*NAVEGACIÓN*/
+.navegacion{
+    background-color: var(--primarioOscuro);
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    
+    
+
+}
+
+.navegacion__enlace, .navegacion__enlace--activo{
+    font-family: "Staatliches", sans-serif;
+    color: var(--blanco);
+    font-size: 30px;
+}
+
+.navegacion__enlace--activo,
+.navegacion__enlace:hover{
+    color: var(--secundario);
+}
+
+/*GRID*/
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    
+}
+
+@media (min-width: 768px){
+    .grid{
+        grid-template-columns: repeat(3, 1fr);
+        margin: 30px;
+    }
+}
+/*PRODUCTOS*/
+.producto{
+    background-color: var(--primarioOscuro);
+    padding: 7px;
+}
+
+.producto__nombre{
+    font-size: 40px;
+}
+
+.producto__precio{
+    font-size: 28px;
+    color: var(--secundario);
+}
+
+.producto__nombre,
+.producto__precio{
+    font-family: "Lato", sans-serif;
+    font-weight: 600;
+    margin: 10px 0;
+    text-align: center;
+    line-height: 1.2;
+}
+
+/*GRÁFICOS*/
+.grafico{
+    min-height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column: 1 / 3;
+    
+}
+
+.grafico--camisas{
+    grid-row: 2 / 3;
+    background-image: url(../img/grafico1.jpg);
+}
+
+.grafico--node{
+    background-image: url(../img/grafico2.jpg);
+    grid-row: 8 / 9;
+}
+
+@media (min-width: 768px){
+    .grafico--node{
+        grid-row: 5 / 6;
+        grid-column: 2 / 4;
+    }
+}
+
+/*NOSOTROS*/
+.nosotros{
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+}
+@media (min-width: 768px){
+    .nosotros{
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 40px;
+        margin: 50px;
+    }
+}
+
+.nosotros__imagen{
+    grid-row: 1 / 2;
+   
+}
+
+@media (min-width: 768px){
+    .nosotros__imagen{
+        grid-column: 2 / 3;
+    }
+}
+
+/*BLOQUES*/
+.bloques{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    
+}
+
+@media (min-width: 768px){
+    .bloques{
+        grid-template-columns: repeat(4, 1fr);
+        margin: 50px;
+        gap: 30px;
+    }
+}
+
+.bloque{
+    text-align: center;
+    
+}
+
+.bloque__titulo{
+    margin: 0;
+}
+
+/*PRODUCTO*/
+@media (min-width: 768px){
+    .camisa{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 20px;
+        
+    }
+}
+
+.formulario{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+}
+
+.formulario__campo{
+    border-color: var(--primarioOscuro);
+    border-width: 10px;
+    border-style: solid;
+    /*border: 10px solid var(--primarioOscuro);*/
+    background-color: transparent;
+    color: var(--blanco);
+    font-size: 20px;
+    font-family: "Lato", sans-serif;
+    padding: 10px;
+    
+}
+
+.formulario__submit{
+    background-color: var(--secundario);
+    border: none;
+    font-size: 20px;
+    font-family: "Staatliches", sans-serif;
+    padding: 20px;
+    transition: background-color .3s ease;
+    grid-column: 1 / 3;
+}
+
+.formulario__submit:hover{
+    cursor: pointer;
+    background-color: var(--secundarioOscuro);
+}
