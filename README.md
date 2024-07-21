@@ -6,6 +6,8 @@ Proyecto finalizado
 
 Acceso al proyecto: https://github.com/paulinabecker/Front-End-Store
 
+Acceso al proyecto Netlify: https://frontend-store-t-shirt.netlify.app/
+
 Descripción: 
 
 Front end de página web de tienda ficticia de camisetas con diseños relacionadas al Desarrollo Web.
