@@ -4,7 +4,7 @@ Proyecto individual
 
 Proyecto finalizado
 
-Acceso al proyecto: https://github.com/paulinabecker/Front-End-Store
+Acceso al proyecto GitHub: https://github.com/paulinabecker/Front-End-Store
 
 Acceso al proyecto Netlify: https://frontend-store-t-shirt.netlify.app/
 
